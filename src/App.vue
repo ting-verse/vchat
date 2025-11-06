@@ -1,8 +1,3 @@
-Vue3.5+Electron+大模型 跨平台AI桌面聊天应用实战 / vchat 温馨提示：Git用户名 /
-Username: ting-verse Git密码 / Password: 为慕课网登录密码 重置密码 App.vue 3.4
-KB 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29
-30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56
-57 58 59 60 61 62 63 64 65 66 67 68 69
 <template>
   <div class="flex items-center justify-between h-screen">
     <div class="w-[300px] bg-gray-200 h-full border-r border-gray-300">
@@ -24,8 +19,10 @@ KB 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29
         </button>
       </div>
     </div>
-    <div class="h-full flex-1">
-      <ProviderSelect :items="providers" />
+    <div class="h-full flex-1 flex items-center">
+      <div class="w-[80%] mx-auto">
+        <ProviderSelect :items="providers" />
+      </div>
     </div>
   </div>
 </template>
@@ -107,8 +104,7 @@ const providers: ProviderProps[] = [
     name: "文心一言",
     desc: "文心一言 百度出品的大模型",
     models: ["ERNIE-4.0-8K", "ERNIE-3.5-8K", "ERNIE-Speed-8K"],
-    avatar:
-      "https://qph.cf2.poecdn.net/main-thumb-pb-3004-50-jougqzjtwfqfyqprxbdwofvnwattmtrg.jpeg",
+    avatar: "https://picsum.photos/id/180/200/200",
     createdAt: "2024-07-03",
     updatedAt: "2024-07-03",
   },
@@ -118,12 +114,10 @@ const providers: ProviderProps[] = [
     desc: "通义千问",
     // https://help.aliyun.com/zh/dashscope/developer-reference/api-details?spm=a2c4g.11186623.0.0.5bf41507xgULX5#b148acc634pfc
     models: ["qwen-turbo", "qwen-plus", "qwen-max"],
-    avatar:
-      "https://qph.cf2.poecdn.net/main-thumb-pb-3004-50-jougqzjtwfqfyqprxbdwofvnwattmtrg.jpeg",
+    avatar: "https://cdn-icons-png.flaticon.com/512/919/919854.png",
     createdAt: "2024-07-03",
     updatedAt: "2024-07-03",
   },
 ];
 console.log('👋 This message is being logged by "App.vue", included via Vite');
 </script>
-Copyright © 2018 imooc.com All Rights Reserved | 京ICP备 12003892号-11 简体中文
