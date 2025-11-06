@@ -20,10 +20,12 @@ import MessageInput from "../components/MessageInput.vue";
 import MessageList from "../components/MessageList.vue";
 import { MessageProps, ConversationProps } from "../types";
 import { messages, conversations } from "../testData";
+
 const route = useRoute();
 const filteredMessages = ref<MessageProps[]>([]);
 const convsersation = ref<ConversationProps>();
 let conversationId = parseInt(route.params.id as string);
+
 filteredMessages.value = messages.filter(
   (message) => message.conversationId === conversationId
 );
