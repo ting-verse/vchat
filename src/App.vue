@@ -25,7 +25,9 @@
           {{ selectedModel }}
           <ProviderSelect :items="providers" v-model="selectedModel" />
         </div>
-        <div class="flex items-center h-[15%]"></div>
+        <div class="flex items-center h-[15%]">
+          <MessageInput />
+        </div>
       </div>
     </div>
   </div>
