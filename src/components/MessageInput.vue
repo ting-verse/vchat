@@ -7,18 +7,12 @@
       class="flex-1 outline-none border-0 bg-white focus:ring-0"
       v-model="model"
     />
-    <button
-      class="inline-flex items-center justify-center shadow-sm bg-green-700 text-white hover:bg-green-700/90 border-green-700 h-[32px] px-[15px] py-[8px] text-sm rounded-[4px]"
-      @click="onCreate"
-    >
-      <Icon icon="radix-icons:paper-plane"></Icon>
-      发送
-    </button>
+    <Button icon-name="radix-icons:paper-plane" @click="onCreate">发送</Button>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { Icon } from "@iconify/vue";
+import Button from "./Button.vue";
 
 const emit = defineEmits<{
   create: [value: string];
